@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import BackDrop from "./components/BackDrop";
 import Navbar from "./components/Navbar";
 import SideDrawer from "./components/SideDrawer";
+import HomeScreen from "./screens/HomeScreen";
 
 function App() {
   const [sideToggle, setSideToggle] = useState(false);
@@ -16,7 +17,10 @@ function App() {
       <BackDrop show={sideToggle} click={() => setSideToggle(false)} />
 
       <main>
-        <Switch></Switch>
+        <Switch>
+          {/* Render HomeScreen */}
+          <Route exact path="/" component={HomeScreen} />
+        </Switch>
       </main>
     </Router>
   );
