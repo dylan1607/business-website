@@ -5,7 +5,7 @@ import NavbarItem from "./NavbarItem";
 const Navbar = ({ click }) => {
   return (
     <div
-      className="flex justify-between items-center p-4 sticky top-0 z-100 
+      className="flex justify-between items-center p-4 sticky top-0 z-10 
      bg-white shadow-md"
     >
       {/* Left */}
@@ -29,7 +29,7 @@ const Navbar = ({ click }) => {
           <p>Login</p>
         </div>
         {/* Hamburger Menu */}
-        <div
+        {/* <div
           className="w-6 h-4 flex flex-col justify-between items-center
           md:hidden "
           onClick={click}
@@ -37,7 +37,21 @@ const Navbar = ({ click }) => {
           <div className="w-full h-1 bg-gray-500"> </div>
           <div className="w-full h-1 bg-gray-500"> </div>
           <div className="w-full h-1 bg-gray-500"> </div>
-        </div>
+        </div> */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          class="inline-block w-6 h-6 stroke-current md:hidden"
+          onClick={click}
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
       </div>
     </div>
   );
