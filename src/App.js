@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import BackDrop from "./components/BackDrop";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import SideDrawer from "./components/SideDrawer";
 import HomeScreen from "./screens/HomeScreen";
+import LoginScreen from "./screens/LoginScreen";
 
 function App() {
   const [sideToggle, setSideToggle] = useState(false);
@@ -20,8 +22,13 @@ function App() {
         <Switch>
           {/* Render HomeScreen */}
           <Route exact path="/" component={HomeScreen} />
+          {/* Render Login */}
+          <Route exact path="/login" component={LoginScreen} />
         </Switch>
       </main>
+
+      {/* Footer */}
+      <Footer />
     </Router>
   );
 }

@@ -6,7 +6,7 @@ const Navbar = ({ click }) => {
   return (
     <div
       className="flex justify-between items-center p-4 sticky top-0 z-10 
-     bg-white shadow-md"
+     bg-white shadow-md no-underline"
     >
       {/* Left */}
       <Link className="flex items-center no-underline" to="/">
@@ -17,7 +17,7 @@ const Navbar = ({ click }) => {
       {/* Right */}
       <div className="flex items-center">
         <div className="hidden md:flex items-center space-x-2 lg:space-x-10">
-          <NavbarItem title="Home" to={"/home"} />
+          <NavbarItem title="Home" to={"/"} />
           <NavbarItem title="Services" to={"/services"} />
           <NavbarItem title="About" to={"/about"} />
           <NavbarItem title="Contact" to={"/contact"} />
@@ -26,7 +26,7 @@ const Navbar = ({ click }) => {
           className="font-bold text-blue-500 p-2 cursor-pointer 
         border-2 border-blue-500 px-4 hover:bg-gray-100 mx-4"
         >
-          <p>Login</p>
+          <Link to="/login">Login</Link>
         </div>
         {/* Hamburger Menu */}
         {/* <div
