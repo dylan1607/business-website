@@ -42,9 +42,9 @@ const HomeScreen = () => {
               Delivering the future of manufacturing and global sourcing now.
             </p>
           </div>
-          <div className="btn btn-info text-white">
-            <p>Get Your Quotation</p>
-          </div>
+          <Link className="btn btn-info" to="/quote">
+            <p>Get an Instant Quote</p>
+          </Link>
           <div className="flex items-center space-x-2">
             <LockClosedIcon width={20} className="text-white" />
             <p>All uploads are secure and confidential</p>
@@ -97,10 +97,8 @@ const HomeScreen = () => {
       </div>
 
       {/* Processing */}
-      <div className="bg-gray-200 py-10 space-y-10">
-        <p className="flex justify-center text-center items-center font-semibold text-3xl px-4">
-          How to Order Parts ?
-        </p>
+      <div className="flex flex-col items-center bg-gray-200 py-10 space-y-10">
+        <p className="font-semibold text-3xl px-4">How to Order Parts ?</p>
         <div
           className="flex flex-col md:flex-row justify-around items-center
         md:items-start space-y-4 md:space-y-0"
@@ -148,6 +146,9 @@ const HomeScreen = () => {
             </div>
           </div>
         </div>
+        <Link className="btn btn-info" to="/quote">
+          <p>Get an Instant Quote</p>
+        </Link>
       </div>
 
       {/* News section */}

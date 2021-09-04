@@ -33,8 +33,8 @@ const Footer = () => {
     //   </div>
     // </div>
 
-    <div>
-      <footer class="flex justify-between p-10 footer bg-gray-200">
+    <div className="bg-gray-600 md:px-10">
+      <footer class="flex justify-between p-10 footer text-white">
         <div>
           <span class="footer-title">Services</span>
           <Link class="link link-hover">Produce</Link>
@@ -60,7 +60,7 @@ const Footer = () => {
         </div>
       </footer>
       <footer
-        class="px-10 py-4 border-t footer bg-gray-600 
+        class="px-10 py-4 border-t footer
       text-white border-base-300"
       >
         <div class="flex items-center">
