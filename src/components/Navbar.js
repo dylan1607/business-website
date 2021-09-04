@@ -17,7 +17,6 @@ const Navbar = ({ click }) => {
       {/* Right */}
       <div className="flex items-center">
         <div className="hidden md:flex items-center space-x-2 lg:space-x-10">
-          <NavbarItem title="Home" path={"/"} />
           <NavbarItem title="Capabilites" dropdown />
           <NavbarItem title="About" path={"/about"} />
           <NavbarItem title="Contact" path={"/contact"} />
