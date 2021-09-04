@@ -10,6 +10,9 @@ import injection from "../statics/injection.svg";
 import fanuc from "../statics/fanuc.svg";
 import makino from "../statics/makino.svg";
 import bosch from "../statics/bosch.svg";
+import technology from "../statics/technology.svg";
+import industry from "../statics/industry.svg";
+import boxes from "../statics/boxes.svg";
 import { LightningBoltIcon } from "@heroicons/react/outline";
 import { LockClosedIcon } from "@heroicons/react/solid";
 import CardNews from "../components/CardNews";
@@ -93,8 +96,62 @@ const HomeScreen = () => {
         </div>
       </div>
 
+      {/* Processing */}
+      <div className="bg-gray-200 py-10 space-y-10">
+        <p className="flex justify-center text-center items-center font-semibold text-3xl px-4">
+          How to Order Parts ?
+        </p>
+        <div
+          className="flex flex-col md:flex-row justify-around items-center
+        md:items-start space-y-4 md:space-y-0"
+        >
+          <div className="flex md:flex-col items-center text-lg space-x-4">
+            <div className="rounded-full p-4 border border-blue-500 bg-white">
+              <img width={60} src={technology} alt="" />
+            </div>
+            <div className="flex flex-col items-center w-52">
+              <p className="font-semibold my-2">Step 1: Get Instace Quote</p>
+              <p>
+                To get your instant quote, just upload your 3D file and select
+                your production process, material, post-processing and quantity.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex justify-center items-center">
+            <div className="flex md:flex-col items-center text-lg space-x-4">
+              <div className="rounded-full p-4 border border-blue-500 bg-white">
+                <img width={60} src={industry} alt="" />
+              </div>
+              <div className="flex flex-col items-center w-52">
+                <p className="font-semibold my-2">Step 2: Confirm Orders</p>
+                <p>
+                  After confirming your order, production will start. You’ll
+                  receive regular status updates.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex justify-center items-center">
+            <div className="flex md:flex-col items-center text-lg space-x-4">
+              <div className="rounded-full p-4 border border-blue-500 bg-white">
+                <img width={60} src={boxes} alt="" />
+              </div>
+              <div className="flex flex-col items-center w-52">
+                <p className="font-semibold my-2">Step 3: Receive Parts</p>
+                <p>
+                  We provide quality assurance, quality reports and delivery
+                  tracking.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* News section */}
-      <div className="bg-gray-100 py-10 space-y-10">
+      <div className="bg-white py-10 space-y-10">
         <p className="flex justify-center text-center items-center font-semibold text-3xl px-4">
           Learn How to Design Custom Parts for Manufacturing
         </p>

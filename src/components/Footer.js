@@ -34,7 +34,7 @@ const Footer = () => {
     // </div>
 
     <div>
-      <footer class="flex justify-between p-10 footer bg-base-200">
+      <footer class="flex justify-between p-10 footer bg-gray-200">
         <div>
           <span class="footer-title">Services</span>
           <Link class="link link-hover">Produce</Link>
@@ -59,7 +59,10 @@ const Footer = () => {
           </Link>
         </div>
       </footer>
-      <footer class="px-10 py-4 border-t footer bg-base-200 text-base-content border-base-300">
+      <footer
+        class="px-10 py-4 border-t footer bg-gray-600 
+      text-white border-base-300"
+      >
         <div class="flex items-center">
           <img className="text-black" src={logo} alt="" />
           <p>TINCNC JOINT STOCK COMPANY</p>
