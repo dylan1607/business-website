@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const LoginScreen = () => {
+const Login = () => {
   const [input, setInput] = useState({
     email: null,
     pwd: null,
@@ -19,7 +19,7 @@ const LoginScreen = () => {
     if (!vaild.test(input.email)) {
       returnData = {
         error: true,
-        msg: "Email not found",
+        msg: "Invaild Email",
       };
     }
     if (input?.pwd?.length < 1) {
@@ -40,15 +40,16 @@ const LoginScreen = () => {
     }
   };
   return (
-    <div className="flex justify-center items-center my-52">
-      <div
-        className="flex flex-col justify-center items-center max-w-md w-4/5
-      bg-gray-800 p-6 rounded-xl"
-      >
-        <h2 className="text-white mb-6 text-2xl">Login</h2>
+    <div
+      className="flex justify-center items-center py-52 bg-gray-100
+    text-black"
+    >
+      <div className="flex flex-col justify-center items-center max-w-sm w-5/6       p-10 rounded-md border-2 border-gray-100 shadow-md bg-white">
+        <h2 className="mb-6 text-2xl">Login</h2>
         <form onSubmit={onSubmit} className="flex flex-col w-full">
           <input
-            className="p-3 rounded-xl text-sm"
+            className="border p-3 rounded-md text-sm focus:outline-none 
+            focus:ring-2 focus:ring-purple-600"
             type="email"
             id="email"
             name="email"
@@ -56,18 +57,25 @@ const LoginScreen = () => {
             onChange={handleChange}
           />
           <input
-            className="p-3 my-6 rounded-xl text-sm"
+            className="border p-3 my-6 rounded-md text-sm focus:outline-none 
+            focus:ring-2 focus:ring-purple-600"
             type="password"
             id="pwd"
             name="pwd"
             placeholder="Password"
             onChange={handleChange}
           />
-          <div className="flex justify-evenly">
-            <button type="submit" className="btn btn-success">
+          <div className="flex flex-col space-y-5">
+            <button type="submit" className="btn btn-info hover:bg-blue-400">
               Login
             </button>
-            <div className="btn btn-ghost text-white text-sm">Register</div>
+            <div
+              className="flex flex-col items-center justify-center text-sm 
+              text-blue-600 cursor-pointer space-y-3"
+            >
+              <Link to="register">Create a new account</Link>
+              <Link to="forgot">Forgot your password ?</Link>
+            </div>
           </div>
         </form>
       </div>
@@ -75,4 +83,4 @@ const LoginScreen = () => {
   );
 };
 
-export default LoginScreen;
+export default Login;

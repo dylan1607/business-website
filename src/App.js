@@ -5,7 +5,9 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import SideDrawer from "./components/SideDrawer";
 import HomeScreen from "./screens/HomeScreen";
-import LoginScreen from "./screens/LoginScreen";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import LegalScreen from "./screens/LegalScreen";
 
 function App() {
   const [sideToggle, setSideToggle] = useState(false);
@@ -18,14 +20,22 @@ function App() {
       {/* BackDrop */}
       <BackDrop show={sideToggle} click={() => setSideToggle(false)} />
 
-      <main>
-        <Switch>
-          {/* Render HomeScreen */}
-          <Route exact path="/" component={HomeScreen} />
-          {/* Render Login */}
-          <Route exact path="/login" component={LoginScreen} />
-        </Switch>
-      </main>
+      <Switch>
+        {/* Render HomeScreen */}
+        <Route exact path="/" component={HomeScreen} />
+        {/* Render Login */}
+        <Route exact path="/login">
+          <Login />
+        </Route>
+        {/* Render Register */}
+        <Route exact path="/register">
+          <Register />
+        </Route>
+        {/* Render Legal Screen */}
+        <Route exact path="/legal">
+          <LegalScreen />
+        </Route>
+      </Switch>
 
       {/* Footer */}
       <Footer />

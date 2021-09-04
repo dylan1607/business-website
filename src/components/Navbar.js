@@ -10,17 +10,17 @@ const Navbar = ({ click }) => {
     >
       {/* Left */}
       <Link className="flex items-center no-underline" to="/">
-        <img className="text-black" src={logo} alt="" srcset="" />
+        <img className="text-black" src={logo} alt="" />
         <p className=" text-xl">TinCNC</p>
       </Link>
 
       {/* Right */}
       <div className="flex items-center">
         <div className="hidden md:flex items-center space-x-2 lg:space-x-10">
-          <NavbarItem title="Home" to={"/"} />
-          <NavbarItem title="Services" to={"/services"} />
-          <NavbarItem title="About" to={"/about"} />
-          <NavbarItem title="Contact" to={"/contact"} />
+          <NavbarItem title="Home" path={"/"} />
+          <NavbarItem title="Capabilites" dropdown />
+          <NavbarItem title="About" path={"/about"} />
+          <NavbarItem title="Contact" path={"/contact"} />
         </div>
         <div
           className="font-bold text-blue-500 p-2 cursor-pointer 
@@ -42,13 +42,13 @@ const Navbar = ({ click }) => {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          class="inline-block w-6 h-6 stroke-current md:hidden"
+          className="inline-block w-6 h-6 stroke-current md:hidden"
           onClick={click}
         >
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
             d="M4 6h16M4 12h16M4 18h16"
           ></path>
         </svg>

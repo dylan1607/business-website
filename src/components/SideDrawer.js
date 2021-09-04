@@ -12,17 +12,17 @@ const SideDrawer = ({ show, click }) => {
     >
       {/* top */}
       <Link className="absolute top-20 flex items-center no-underline" to="/">
-        <img className="text-black" src={logo} alt="" srcset="" />
+        <img className="text-black" src={logo} alt="" />
         <p className=" text-xl">TinCNC</p>
       </Link>
 
       {/* bottom */}
       <div className="flex flex-col items-center">
         <div className="flex flex-col items-center space-y-4">
-          <NavbarItem title="Home" to={"/"} />
-          <NavbarItem title="Services" to={"/services"} />
-          <NavbarItem title="About" to={"/about"} />
-          <NavbarItem title="Contact" to={"/contact"} />
+          <NavbarItem title="Home" path={"/"} />
+          <NavbarItem title="Capabilites" dropdown />
+          <NavbarItem title="About" path={"/about"} />
+          <NavbarItem title="Contact" path={"/contact"} />
         </div>
         <div
           className="font-bold text-blue-500 p-2 px-6 cursor-pointer 
