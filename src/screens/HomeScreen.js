@@ -98,7 +98,9 @@ const HomeScreen = () => {
 
       {/* Processing */}
       <div className="flex flex-col items-center bg-gray-200 py-10 space-y-10">
-        <p className="font-semibold text-2xl px-4">How to Order Parts ?</p>
+        <p className="text-center font-semibold text-2xl px-4">
+          How to Order Parts ?
+        </p>
         <div
           className="flex flex-col md:flex-row justify-around items-center
         md:items-start space-y-4 md:space-y-0"
