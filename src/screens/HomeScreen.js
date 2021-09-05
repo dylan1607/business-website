@@ -84,7 +84,7 @@ const HomeScreen = () => {
 
       {/* Feedback */}
       <div className="py-10 space-y-10">
-        <p className="flex justify-center text-center text-3xl font-semibold px-8">
+        <p className="text-center text-2xl font-semibold px-4">
           What Our Customers Say
         </p>
         <div className="flex justify-center space-x-10 px-8">
@@ -98,7 +98,7 @@ const HomeScreen = () => {
 
       {/* Processing */}
       <div className="flex flex-col items-center bg-gray-200 py-10 space-y-10">
-        <p className="font-semibold text-3xl px-4">How to Order Parts ?</p>
+        <p className="font-semibold text-2xl px-4">How to Order Parts ?</p>
         <div
           className="flex flex-col md:flex-row justify-around items-center
         md:items-start space-y-4 md:space-y-0"
@@ -153,7 +153,7 @@ const HomeScreen = () => {
 
       {/* News section */}
       <div className="bg-white py-10 space-y-10">
-        <p className="flex justify-center text-center items-center font-semibold text-3xl px-4">
+        <p className="text-center font-semibold text-2xl px-4">
           Learn How to Design Custom Parts for Manufacturing
         </p>
         <div className="flex p-4 space-x-8 overflow-x-scroll scrollbar-hide">
