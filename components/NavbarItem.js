@@ -23,13 +23,13 @@ const NavbarItem = ({ title, path, dropdown }) => {
             text-black bg-gray-200"
           >
             <li>
-              <Link href="/" passHref>CNC</Link>
+              <Link href="" passHref>CNC</Link>
             </li>
             <li>
-              <Link href="/" passHref>3D Printer</Link>
+              <Link href="" passHref>3D Printer</Link>
             </li>
             <li>
-              <Link href="/" passHref>Other</Link>
+              <Link href="" passHref>Other</Link>
             </li>
           </ul>
         </div>
