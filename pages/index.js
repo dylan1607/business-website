@@ -9,6 +9,7 @@ import technology from "../statics/technology.svg";
 import industry from "../statics/industry.svg";
 import boxes from "../statics/boxes.svg";
 import logo from "../statics/logo.png";
+import landing from "../statics/landing.jpeg";
 
 // Import component
 import Navbar from "../components/Navbar";
@@ -49,7 +50,7 @@ export default function Home() {
         {/* Landing section */}
         <div
           style={{
-            backgroundImage: `url(https://images.unsplash.com/photo-1530046614490-89e6f776b83b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)`,
+            backgroundImage: `url("https://images.unsplash.com/photo-1530046614490-89e6f776b83b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80")`,
           }}
           className="bg-cover bg-center text-white"
         >
@@ -192,27 +193,7 @@ export default function Home() {
             overflow-x-scroll scrollbar-hide"
           >
             <CardNews
-              path="https://images.unsplash.com/photo-1567361808960-dec9cb578182?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dG9vbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=60"
-              title="What Every Designer Needs to Know ?"
-              author="Admin"
-            />
-            <CardNews
-              path="https://images.unsplash.com/photo-1567361808960-dec9cb578182?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dG9vbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=60"
-              title="What Every Designer Needs to Know ?"
-              author="Admin"
-            />
-            <CardNews
-              path="https://images.unsplash.com/photo-1567361808960-dec9cb578182?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dG9vbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=60"
-              title="What Every Designer Needs to Know ?"
-              author="Admin"
-            />
-            <CardNews
-              path="https://images.unsplash.com/photo-1567361808960-dec9cb578182?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dG9vbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=60"
-              title="What Every Designer Needs to Know ?"
-              author="Admin"
-            />
-            <CardNews
-              path="https://images.unsplash.com/photo-1567361808960-dec9cb578182?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dG9vbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=60"
+              path={landing}
               title="What Every Designer Needs to Know ?"
               author="Admin"
             />

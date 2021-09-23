@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import BackDrop from "../components/BackDrop";
 import SideDrawer from "../components/SideDrawer";
-const register = () => {
+const Register = () => {
   const [input, setInput] = useState({
     first: null,
     last: null,
@@ -104,8 +104,8 @@ const register = () => {
             </div>
           </form>
           <div>
-            By registering, I agree to TinCNC's
-            <Link href="/legal">
+            By registering, I agree to TinCNC
+            <Link href="/legal" passHref>
               <p className="text-blue-600 font-bold cursor-pointer">
                 Customer Service Agreement, General Terms and Conditions, and
                 Privacy Policy.
@@ -124,4 +124,4 @@ const register = () => {
   );
 };
 
-export default register;
+export default Register;

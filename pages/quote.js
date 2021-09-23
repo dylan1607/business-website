@@ -1,4 +1,4 @@
-const quote = () => {
+const Quote = () => {
     return (
         <div>
             Đang xây dựng
@@ -6,4 +6,4 @@ const quote = () => {
     )
 }
 
-export default quote
+export default Quote

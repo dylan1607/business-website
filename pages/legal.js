@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import SideDrawer from "../components/SideDrawer";
 import BackDrop from "../components/BackDrop";
 import { useState } from "react";
-const legal = () => {
+const Legal = () => {
   const [sideToggle, setSideToggle] = useState(false);
   return (
     <>
@@ -49,4 +49,4 @@ const legal = () => {
   );
 };
 
-export default legal;
+export default Legal;

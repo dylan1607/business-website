@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import SideDrawer from "../components/SideDrawer";
 import BackDrop from "../components/BackDrop";
 
-const login = () => {
+const Login = () => {
   const [input, setInput] = useState({
     email: null,
     pwd: null,
@@ -95,4 +95,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;
