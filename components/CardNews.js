@@ -1,3 +1,4 @@
+import Img from "next/image";
 const CardNews = ({ path, title, author }) => {
   return (
     <div
@@ -5,7 +6,7 @@ const CardNews = ({ path, title, author }) => {
       transform transition w-60 h-auto duration-200 hover:scale-105 
       whitespace-nowrap"
     >
-      <img className="rounded-xl" src={path} alt="" />
+      <Img className="rounded-xl" src={path} alt="" />
       <p className="font-bold truncate">{title}</p>
       <div className="flex justify-between">
         <p>{author}</p>
