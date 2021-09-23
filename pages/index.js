@@ -55,13 +55,13 @@ export default function Home() {
         >
           <div className="mx-8 my-40 space-y-8">
             <div className="space-y-4">
-              <p className="flex flex-col font-medium text-5xl">
-                <h2>Sản Xuất Theo</h2>
-                <h2>Nhu Cầu</h2>
-              </p>
+              <h2 className="flex flex-col font-medium text-5xl">
+                <p>Sản Xuất Theo</p>
+                <p>Nhu Cầu</p>
+              </h2>
               <p>
-              Mang đến tương lai của ngành sản xuất và nguồn cung ứng toàn cầu
-              ngay bây giờ.
+                Mang đến tương lai của ngành sản xuất và nguồn cung ứng toàn cầu
+                ngay bây giờ.
               </p>
             </div>
             <Link href="/quote">
@@ -99,15 +99,15 @@ export default function Home() {
             <Image src={makino} alt="" />
           </div>
           <span>
-          Được tin tưởng và mua hàng bởi những Kỹ Sư của những Công Ty trên toàn
-          thế giới.
+            Được tin tưởng và mua hàng bởi những Kỹ Sư của những Công Ty trên
+            toàn thế giới.
           </span>
         </div>
 
         {/* Feedback */}
         <div className="py-10 space-y-10">
           <p className="text-center text-2xl font-semibold px-4">
-          Những khách hàng của chúng tôi nói gì
+            Những khách hàng của chúng tôi nói gì
           </p>
           <div className="flex justify-center space-x-10 px-8">
             <CardFeedback
@@ -123,7 +123,7 @@ export default function Home() {
         {/* Processing */}
         <div className="flex flex-col items-center bg-gray-200 p-10 space-y-10">
           <p className="text-center font-semibold text-2xl px-4">
-          Làm thế nào để đặt hàng ?
+            Làm thế nào để đặt hàng ?
           </p>
           <div
             className="flex flex-col md:flex-row justify-around items-center
@@ -134,10 +134,13 @@ export default function Home() {
                 <Image width={60} height={50} src={technology} alt="" />
               </div>
               <div className="flex flex-col items-center w-52">
-                <p className="font-semibold my-2">Bước 1: Nhận báo giá ngay lập tức</p>
+                <p className="font-semibold my-2">
+                  Bước 1: Nhận báo giá ngay lập tức
+                </p>
                 <p>
-                Để nhận báo giá tức thời, chỉ cần tải lên tệp 3D của bạn và chọn
-                quy trình sản xuất, vật liệu, hậu xử lý và số lượng của bạn
+                  Để nhận báo giá tức thời, chỉ cần tải lên tệp 3D của bạn và
+                  chọn quy trình sản xuất, vật liệu, hậu xử lý và số lượng của
+                  bạn
                 </p>
               </div>
             </div>
@@ -148,10 +151,12 @@ export default function Home() {
                   <Image width={60} height={50} src={industry} alt="" />
                 </div>
                 <div className="flex flex-col items-center w-52">
-                  <p className="font-semibold my-2">Bước 2: Xác nhận đơn hàng</p>
+                  <p className="font-semibold my-2">
+                    Bước 2: Xác nhận đơn hàng
+                  </p>
                   <p>
-                  Sau khi xác nhận đơn hàng của bạn, quá trình sản xuất sẽ bắt
-                  đầu. Bạn sẽ nhận được cập nhật trạng thái thường xuyên.
+                    Sau khi xác nhận đơn hàng của bạn, quá trình sản xuất sẽ bắt
+                    đầu. Bạn sẽ nhận được cập nhật trạng thái thường xuyên.
                   </p>
                 </div>
               </div>
@@ -165,8 +170,8 @@ export default function Home() {
                 <div className="flex flex-col items-center w-52">
                   <p className="font-semibold my-2">Bước 3: Nhận hàng</p>
                   <p>
-                  Chúng tôi cung cấp đảm bảo chất lượng, báo cáo chất lượng và
-                  theo dõi giao hàng
+                    Chúng tôi cung cấp đảm bảo chất lượng, báo cáo chất lượng và
+                    theo dõi giao hàng
                   </p>
                 </div>
               </div>
@@ -180,7 +185,7 @@ export default function Home() {
         {/* News section */}
         <div className="bg-white space-y-6 py-8">
           <p className="text-center font-semibold text-2xl px-4">
-          Tìm hiểu cách thiết kế các bộ phận để sản xuất
+            Tìm hiểu cách thiết kế các bộ phận để sản xuất
           </p>
           <div
             className="flex items-center justify-between p-2 space-x-5 
