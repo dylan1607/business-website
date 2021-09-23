@@ -10,7 +10,7 @@ const Navbar = ({ click }) => {
      bg-white shadow-md no-underline"
     >
       {/* Left */}
-      <Link href="/">
+      <Link href="/" passHref>
         <div className="flex items-center no-underline cursor-pointer">
           <Image className="text-black" src={logo} alt="" />
           <h2 className=" text-xl">TinCNC</h2>

@@ -7,7 +7,7 @@ const NavbarItem = ({ title, path, dropdown }) => {
     hover:text-white"
     >
       {path && (
-        <Link className="no-underline" href={path}>
+        <Link className="no-underline" href={path} passHref>
           <p className="text-xl ">{title}</p>
         </Link>
       )}
@@ -23,13 +23,13 @@ const NavbarItem = ({ title, path, dropdown }) => {
             text-black bg-gray-200"
           >
             <li>
-              <Link href="/">CNC</Link>
+              <Link href="/" passHref>CNC</Link>
             </li>
             <li>
-              <Link href="/">3D Printer</Link>
+              <Link href="/" passHref>3D Printer</Link>
             </li>
             <li>
-              <Link href="/">Other</Link>
+              <Link href="/" passHref>Other</Link>
             </li>
           </ul>
         </div>

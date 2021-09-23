@@ -14,7 +14,7 @@ const SideDrawer = ({ show, click }) => {
       {/* top */}
       <div className="absolute top-20 flex items-center no-underline cursor-pointer">
         <Image className="text-black" src={logo} alt="" />
-        <Link href="/">
+        <Link href="/" passHref>
           <p className=" text-xl">TinCNC</p>
         </Link>
       </div>

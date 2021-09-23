@@ -92,7 +92,7 @@ const Register = () => {
           </div>
         </form>
         <div>
-          By registering, I agree to TinCNC's
+          By registering, I agree to TinCNC 
           <Link to="/legal" className="text-blue-600 font-bold">
             Customer Service Agreement, General Terms and Conditions, and
             Privacy Policy.

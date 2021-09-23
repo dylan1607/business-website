@@ -64,7 +64,7 @@ export default function Home() {
                 ngay bây giờ.
               </p>
             </div>
-            <Link href="/quote">
+            <Link href="/quote" passHref>
               <p className="btn btn-info">Nhận báo giá ngay</p>
             </Link>
             <div className="flex items-center space-x-2">
@@ -177,7 +177,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <Link href="/quote">
+          <Link href="/quote" passHref>
             <p className="btn btn-info">Nhận báo giá ngay</p>
           </Link>
         </div>
