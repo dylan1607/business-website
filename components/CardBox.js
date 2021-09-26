@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 const CardBox = ({ title, path }) => {
   return (
     <div
@@ -8,9 +9,11 @@ const CardBox = ({ title, path }) => {
     >
       <h1 className=" font-bold">{title}</h1>
       <Image src={path} alt="" />
-      <div className="btn btn-info">
-        <p className="text-sm">Start a quote</p>
-      </div>
+      <Link href="/quote" passHref>
+        <div className="btn btn-info">
+          <p className="text-sm">Start a quote</p>
+        </div>
+      </Link>
       <div className="btn btn-ghost">Learn More</div>
     </div>
   );

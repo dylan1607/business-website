@@ -29,6 +29,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import MessengerCustomerChat from "react-messenger-customer-chat";
 
 export default function Home() {
   const [sideToggle, setSideToggle] = useState(false);
@@ -82,7 +83,6 @@ export default function Home() {
           <CardBox title="Gia Công CNC" path={process} />
           <CardBox title="In 3D" path={printer} />
           <CardBox title="Injection" path={injection} />
-
           <CardBox title="Analyze" path={injection} />
           <CardBox title="QC/QA" path={injection} />
           <CardBox title="Material" path={injection} />
@@ -187,15 +187,29 @@ export default function Home() {
           <p className="text-center font-semibold text-2xl px-4">
             Tìm hiểu cách thiết kế các bộ phận để sản xuất
           </p>
-          <div
-            className="flex items-center justify-between p-2 space-x-5 
-            overflow-x-scroll scrollbar-hide"
-          >
-            <CardNews
-              path={landing}
-              title="What Every Designer Needs to Know ?"
-              author="Admin"
-            />
+          <div className="flex justify-between overflow-x-scroll scrollbar-hide">
+            <div className="flex space-x-5 p-5">
+              <CardNews
+                path={landing}
+                title="What Every Designer Needs to Know ?"
+                author="Admin"
+              />
+              <CardNews
+                path={landing}
+                title="What Every Designer Needs to Know ?"
+                author="Admin"
+              />
+              <CardNews
+                path={landing}
+                title="What Every Designer Needs to Know ?"
+                author="Admin"
+              />
+              <CardNews
+                path={landing}
+                title="What Every Designer Needs to Know ?"
+                author="Admin"
+              />
+            </div>
           </div>
         </div>
 
@@ -211,12 +225,16 @@ export default function Home() {
         {/* ShowBoxChat */}
         {click && (
           <div
-            className="fixed bottom-12 right-16 bg-gray-400 w-60 h-96
-        rounded-xl"
-          ></div>
+            className="fixed bottom-12 right-16 bg-gray-400 
+          w-60 h-96 rounded-xl"
+          >
+            <MessengerCustomerChat
+              pageId="1895382890692545"
+              appId="215971755540323"
+            />
+          </div>
         )}
       </div>
-
       <Footer />
     </div>
   );

@@ -29,7 +29,7 @@ const SideDrawer = ({ show, click }) => {
             <NavbarItem title="Liên hệ" path={"/contact"} />
           </li>
           <li>
-            <NavbarItem title="Legal & Policy" path={"/legal"} />
+            <NavbarItem title="Điều khoản" path={"/legal"} />
           </li>
         </ul>
         <div

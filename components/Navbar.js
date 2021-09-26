@@ -11,10 +11,10 @@ const Navbar = ({ click }) => {
     >
       {/* Left */}
       <Link href="/" passHref>
-          <div className="flex items-center no-underline cursor-pointer">
-            <Image className="text-black" src={logo} alt="" />
-            <h2 className=" text-xl">TinCNC</h2>
-          </div>
+        <div className="flex items-center no-underline cursor-pointer">
+          <Image className="text-black" src={logo} alt="" />
+          <h2 className=" text-xl">TinCNC</h2>
+        </div>
       </Link>
 
       {/* Right */}
@@ -27,7 +27,7 @@ const Navbar = ({ click }) => {
             <NavbarItem title="Liên hệ" path={"/contact"} />
           </li>
           <li>
-            <NavbarItem title="Legal & Policy" path={"/legal"} />
+            <NavbarItem title="Điều khoản" path={"/legal"} />
           </li>
         </ul>
         <div
