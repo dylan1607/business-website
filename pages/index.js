@@ -37,7 +37,6 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <link rel="shortcut icon" href={logo} />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <title>TinCNC</title>
       </Head>

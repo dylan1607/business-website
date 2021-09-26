@@ -2,6 +2,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import SideDrawer from "../components/SideDrawer";
 import BackDrop from "../components/BackDrop";
+import Link from "next/link";
 import {
   LocationMarkerIcon,
   PhoneIcon,
@@ -31,11 +32,11 @@ const contact = () => {
           </li>
           <li className="flex items-center space-x-4">
             <PhoneIcon height={30} width={30} />
-            <a href="tel:+84933580721">+84 93 3580721</a>
+            <Link href="tel:+84933580721">+84 93 3580721</Link>
           </li>
           <li className="flex items-center space-x-4">
             <MailIcon height={30} width={30} />
-            <a href="mailto:admin@tincnc.vn">admin@tincnc.com</a>
+            <Link href="mailto:admin@tincnc.vn">admin@tincnc.com</Link>
           </li>
         </ul>
         <iframe

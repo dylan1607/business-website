@@ -11,12 +11,10 @@ const Navbar = ({ click }) => {
     >
       {/* Left */}
       <Link href="/" passHref>
-        <a href="/">
           <div className="flex items-center no-underline cursor-pointer">
             <Image className="text-black" src={logo} alt="" />
             <h2 className=" text-xl">TinCNC</h2>
           </div>
-        </a>
       </Link>
 
       {/* Right */}
