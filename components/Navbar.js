@@ -6,7 +6,7 @@ import NavbarItem from "./NavbarItem";
 const Navbar = ({ click }) => {
   return (
     <div
-      className="flex justify-between items-center p-4 sticky top-0 z-10 
+      className="flex justify-between items-center p-3 sticky top-0 z-10 
      bg-white shadow-md no-underline"
     >
       {/* Left */}
@@ -31,8 +31,8 @@ const Navbar = ({ click }) => {
           </li>
         </ul>
         <div
-          className="font-bold text-blue-500 p-2 cursor-pointer 
-        border-2 border-blue-500 px-4 hover:bg-gray-100 mx-4"
+          className="font-bold text-blue-500 cursor-pointer 
+        border-2 border-blue-500 p-2 hover:bg-blue-100 mx-5"
         >
           <Link href="/login">Đăng nhập</Link>
         </div>

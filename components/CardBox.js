@@ -11,7 +11,7 @@ const CardBox = ({ title, path }) => {
       <Image src={path} alt="" />
       <Link href="/quote" passHref>
         <div className="btn btn-info">
-          <p className="text-sm">Start a quote</p>
+          <p className="text-sm">NHẬN BÁO GIÁ</p>
         </div>
       </Link>
       <div className="btn btn-ghost">Learn More</div>

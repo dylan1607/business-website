@@ -8,8 +8,9 @@ import bosch from "../statics/bosch.svg";
 import technology from "../statics/technology.svg";
 import industry from "../statics/industry.svg";
 import boxes from "../statics/boxes.svg";
-import logo from "../statics/logo.png";
+import metal from "../statics/metal.svg";
 import landing from "../statics/landing.jpeg";
+import material from "../statics/material.svg";
 
 // Import component
 import Navbar from "../components/Navbar";
@@ -21,8 +22,7 @@ import CardFeedback from "../components/CardFeedback";
 import CardBox from "../components/CardBox";
 
 // Import icon
-import { LightningBoltIcon } from "@heroicons/react/outline";
-import { LockClosedIcon } from "@heroicons/react/solid";
+import { LockClosedIcon, ChatIcon } from "@heroicons/react/solid";
 
 // Import function
 import Head from "next/head";
@@ -39,7 +39,9 @@ export default function Home() {
     <div>
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <title>TinCNC</title>
+        <title>
+          Manufacturing on Demand | Rapid Prototpying, Custom Parts | TinCNC
+        </title>
       </Head>
       <Navbar click={() => setSideToggle(true)} />
       <SideDrawer show={sideToggle} click={() => setSideToggle(false)} />
@@ -57,8 +59,8 @@ export default function Home() {
           <div className="mx-8 my-40 space-y-8">
             <div className="space-y-4">
               <h2 className="flex flex-col font-medium text-5xl">
-                <p>Sản Xuất Theo</p>
-                <p>Nhu Cầu</p>
+                Sản Xuất Theo
+                <br /> Nhu Cầu
               </h2>
               <p>
                 Mang đến tương lai của ngành sản xuất và nguồn cung ứng toàn cầu
@@ -82,10 +84,9 @@ export default function Home() {
         >
           <CardBox title="Gia Công CNC" path={process} />
           <CardBox title="In 3D" path={printer} />
-          <CardBox title="Injection" path={injection} />
-          <CardBox title="Analyze" path={injection} />
-          <CardBox title="QC/QA" path={injection} />
-          <CardBox title="Material" path={injection} />
+          <CardBox title="Injection Mold" path={injection} />
+          <CardBox title="Sheet Metal" path={metal} />
+          <CardBox title="Vật Liệu" path={material} />
         </div>
 
         {/* Client */}
@@ -215,18 +216,18 @@ export default function Home() {
 
         {/* IconChat */}
         <div
-          className="fixed bottom-5 right-5 rounded-full z-40 bg-blue-400
-        text-white p-2 cursor-pointer animate-bounce"
+          className="fixed bottom-8 right-8 rounded-full z-40 bg-blue-600
+        text-white p-3 cursor-pointer"
           onClick={() => setClick(!click)}
         >
-          <LightningBoltIcon width={30} />
+          <ChatIcon width={30} />
         </div>
 
         {/* ShowBoxChat */}
         {click && (
           <div
-            className="fixed bottom-12 right-16 bg-gray-400 
-          w-60 h-96 rounded-xl"
+            className="fixed bottom-12 right-16 bg-black 
+          w-52 h-80 rounded-xl"
           >
             <MessengerCustomerChat
               pageId="1895382890692545"
