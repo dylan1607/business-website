@@ -215,25 +215,21 @@ export default function Home() {
         </div>
 
         {/* IconChat */}
-        <div
+        {/* <div
           className="fixed bottom-8 right-8 rounded-full z-40 bg-blue-600
         text-white p-3 cursor-pointer"
           onClick={() => setClick(!click)}
         >
           <ChatIcon width={30} />
-        </div>
+        </div> */}
+        <MessengerCustomerChat pageId="671656946378930" appId="651615732489589" />
 
         {/* ShowBoxChat */}
         {click && (
           <div
             className="fixed bottom-12 right-16 bg-black 
           w-52 h-80 rounded-xl"
-          >
-            <MessengerCustomerChat
-              pageId="1895382890692545"
-              appId="215971755540323"
-            />
-          </div>
+          ></div>
         )}
       </div>
       <Footer />
