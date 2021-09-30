@@ -84,7 +84,7 @@ const Login = () => {
               text-blue-600 cursor-pointer space-y-3"
               >
                 <Link href="/register">Create a new account</Link>
-                <Link href="/forgot">Forgot your password ?</Link>
+                <Link href="">Forgot your password ?</Link>
               </div>
             </div>
           </form>

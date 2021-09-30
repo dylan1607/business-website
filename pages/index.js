@@ -22,7 +22,7 @@ import CardFeedback from "../components/CardFeedback";
 import CardBox from "../components/CardBox";
 
 // Import icon
-import { LockClosedIcon, ChatIcon } from "@heroicons/react/solid";
+import { LockClosedIcon } from "@heroicons/react/solid";
 
 // Import function
 import Head from "next/head";
@@ -33,7 +33,6 @@ import MessengerCustomerChat from "react-messenger-customer-chat";
 
 export default function Home() {
   const [sideToggle, setSideToggle] = useState(false);
-  const [click, setClick] = useState(false);
 
   return (
     <div>
@@ -46,6 +45,7 @@ export default function Home() {
       <Navbar click={() => setSideToggle(true)} />
       <SideDrawer show={sideToggle} click={() => setSideToggle(false)} />
       <BackDrop show={sideToggle} click={() => setSideToggle(false)} />
+
       {/* <HomeScreen /> */}
 
       <div className="flex flex-col overflow-hidden ">
@@ -123,9 +123,9 @@ export default function Home() {
 
         {/* Processing */}
         <div className="flex flex-col items-center bg-gray-200 p-10 space-y-10">
-          <p className="text-center font-semibold text-2xl px-4">
+          <h2 className="text-center font-semibold text-2xl px-4">
             Làm thế nào để đặt hàng ?
-          </p>
+          </h2>
           <div
             className="flex flex-col md:flex-row justify-around items-center
         md:items-start space-y-4 md:space-y-0"
@@ -184,53 +184,42 @@ export default function Home() {
         </div>
 
         {/* News section */}
-        <div className="bg-white space-y-6 py-8">
-          <p className="text-center font-semibold text-2xl px-4">
+        <div className="bg-white py-10 space-y-4">
+          <h2 className="text-center font-semibold text-2xl px-8">
             Tìm hiểu cách thiết kế các bộ phận để sản xuất
-          </p>
-          <div className="flex justify-between overflow-x-scroll scrollbar-hide">
-            <div className="flex space-x-5 p-5">
-              <CardNews
-                path={landing}
-                title="What Every Designer Needs to Know ?"
-                author="Admin"
-              />
-              <CardNews
-                path={landing}
-                title="What Every Designer Needs to Know ?"
-                author="Admin"
-              />
-              <CardNews
-                path={landing}
-                title="What Every Designer Needs to Know ?"
-                author="Admin"
-              />
-              <CardNews
-                path={landing}
-                title="What Every Designer Needs to Know ?"
-                author="Admin"
-              />
-            </div>
+          </h2>
+          <div
+            className="flex p-4 space-x-5 justify-between
+          overflow-x-scroll scrollbar-hide"
+          >
+            <CardNews
+              path={landing}
+              title="What Every Designer Needs to Know ?"
+              author="Admin"
+            />
+            <CardNews
+              path={landing}
+              title="What Every Designer Needs to Know ?"
+              author="Admin"
+            />
+            <CardNews
+              path={landing}
+              title="What Every Designer Needs to Know ?"
+              author="Admin"
+            />
+            <CardNews
+              path={landing}
+              title="What Every Designer Needs to Know ?"
+              author="Admin"
+            />
           </div>
         </div>
 
         {/* IconChat */}
-        {/* <div
-          className="fixed bottom-8 right-8 rounded-full z-40 bg-blue-600
-        text-white p-3 cursor-pointer"
-          onClick={() => setClick(!click)}
-        >
-          <ChatIcon width={30} />
-        </div> */}
-        <MessengerCustomerChat pageId="671656946378930" appId="651615732489589" />
-
-        {/* ShowBoxChat */}
-        {click && (
-          <div
-            className="fixed bottom-12 right-16 bg-black 
-          w-52 h-80 rounded-xl"
-          ></div>
-        )}
+        <MessengerCustomerChat
+          pageId="671656946378930"
+          appId="651615732489589"
+        />
       </div>
       <Footer />
     </div>

@@ -6,7 +6,7 @@ import NavbarItem from "./NavbarItem";
 const Navbar = ({ click }) => {
   return (
     <div
-      className="flex justify-between items-center p-3 sticky top-0 z-10 
+      className="flex justify-between items-center p-3 sm:px-8 sticky top-0 z-10 
      bg-white shadow-md no-underline"
     >
       {/* Left */}
