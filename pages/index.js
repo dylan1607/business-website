@@ -29,7 +29,6 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import MessengerCustomerChat from "react-messenger-customer-chat";
 
 export default function Home() {
   const [sideToggle, setSideToggle] = useState(false);
@@ -214,12 +213,6 @@ export default function Home() {
             />
           </div>
         </div>
-
-        {/* IconChat */}
-        {/* <MessengerCustomerChat
-          pageId="671656946378930"
-          appId="651615732489589"
-        /> */}
       </div>
       <Footer />
     </div>
