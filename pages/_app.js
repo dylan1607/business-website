@@ -1,7 +1,13 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import MessengerCustomerChat from "react-messenger-customer-chat";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <div>
+      <Component {...pageProps} />
+      <MessengerCustomerChat pageId="671656946378930" appId="651615732489589" />
+    </div>
+  );
 }
 
-export default MyApp
+export default MyApp;

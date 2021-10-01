@@ -216,10 +216,10 @@ export default function Home() {
         </div>
 
         {/* IconChat */}
-        <MessengerCustomerChat
+        {/* <MessengerCustomerChat
           pageId="671656946378930"
           appId="651615732489589"
-        />
+        /> */}
       </div>
       <Footer />
     </div>
