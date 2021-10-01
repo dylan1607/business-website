@@ -32,7 +32,8 @@ const contact = () => {
           </li>
           <li className="flex items-center space-x-4">
             <PhoneIcon height={30} width={30} />
-            <Link href="tel:+84933580721">+84 93 3580721</Link>
+            <Link href="tel:+84933580721">+84 933 580 721</Link>
+            <Link href="tel:+84933207143">+84 933 207 143</Link>
           </li>
           <li className="flex items-center space-x-4">
             <MailIcon height={30} width={30} />
