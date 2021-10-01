@@ -20,9 +20,9 @@ const Navbar = ({ click }) => {
       {/* Right */}
       <div className="flex items-center">
         <ul className="hidden md:flex items-center space-x-2 lg:space-x-10 cursor-pointer">
-          <li>
+          {/* <li>
             <NavbarItem title="Năng lực" dropdown />
-          </li>
+          </li> */}
           <li>
             <NavbarItem title="Liên hệ" path={"/contact"} />
           </li>

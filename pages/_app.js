@@ -8,7 +8,7 @@ const MessengerCustomerChat = dynamic(() =>
 
 function MyApp({ Component, pageProps }) {
   return typeof window === "undefined" ? null : (
-    <div>
+    <div suppressHydrationWarning={true}>
       <Component {...pageProps} />
       <MessengerCustomerChat pageId="671656946378930" appId="651615732489589" />
     </div>

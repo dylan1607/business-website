@@ -22,9 +22,9 @@ const SideDrawer = ({ show, click }) => {
       {/* bottom */}
       <div className="flex flex-col items-center">
         <ul className="flex flex-col items-center space-y-2 cursor-pointer">
-          <li>
+          {/* <li>
             <NavbarItem title="Năng lực" dropdown />
-          </li>
+          </li> */}
           <li>
             <NavbarItem title="Liên hệ" path={"/contact"} />
           </li>

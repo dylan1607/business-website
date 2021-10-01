@@ -29,10 +29,10 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import axios from "axios";
 
-export default function Home() {
+export default function Home({ articles }) {
   const [sideToggle, setSideToggle] = useState(false);
-
   return (
     <div>
       <Head>
@@ -191,30 +191,29 @@ export default function Home() {
             className="flex p-4 space-x-5 justify-between
           overflow-x-scroll scrollbar-hide"
           >
-            <CardNews
-              path={landing}
-              title="What Every Designer Needs to Know ?"
-              author="Admin"
-            />
-            <CardNews
-              path={landing}
-              title="What Every Designer Needs to Know ?"
-              author="Admin"
-            />
-            <CardNews
-              path={landing}
-              title="What Every Designer Needs to Know ?"
-              author="Admin"
-            />
-            <CardNews
-              path={landing}
-              title="What Every Designer Needs to Know ?"
-              author="Admin"
-            />
+            {articles.map((item) => (
+              <CardNews
+                key={item.id}
+                path={landing}
+                title={item.header}
+                author="Admin"
+              />
+            ))}
           </div>
         </div>
       </div>
       <Footer />
     </div>
   );
+}
+
+// Fetch data
+export async function getServerSideProps() {
+  const data = await axios.get("http://quanly.tincnc.vn:1337/articles");
+  const articles = data.data;
+  return {
+    props: {
+      articles,
+    },
+  };
 }
