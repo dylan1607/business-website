@@ -12,14 +12,14 @@ const CardNews = ({ path, title, author }) => {
         className="rounded-xl"
         src={path ? path : landing}
         alt=""
-        height={100}
-        width={100}
-        layout="intrinsic"
+        height={150}
+        width={200}
+        layout="responsive"
       />
       <p className="font-bold truncate">{title}</p>
       <div className="flex justify-between">
         <p>{author}</p>
-        <span>3 min read</span>
+        <span>3 phút đọc</span>
       </div>
     </div>
   );
