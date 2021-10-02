@@ -2,27 +2,14 @@
 // Import Static
 import logo from "../../statics/logo.svg";
 
-// Import Component
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import SideDrawer from "../../components/SideDrawer";
-import BackDrop from "../../components/BackDrop";
-
 // Import function
-import { useState } from "react";
 import { fetchQuery } from "../../utils/request";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 
 export default function Article({ article }) {
-  const [sideToggle, setSideToggle] = useState(false);
-
   return (
     <>
-      <Navbar click={() => setSideToggle(true)} />
-      <SideDrawer show={sideToggle} click={() => setSideToggle(false)} />
-      <BackDrop show={sideToggle} click={() => setSideToggle(false)} />
-
       {/* Content */}
       <div className="flex justify-center">
         <div className="flex flex-col px-4 py-10 max-w-4xl space-y-5">
@@ -52,8 +39,6 @@ export default function Article({ article }) {
           </div>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 }

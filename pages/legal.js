@@ -1,16 +1,8 @@
 import Link from "next/link";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import SideDrawer from "../components/SideDrawer";
-import BackDrop from "../components/BackDrop";
-import { useState } from "react";
+
 const Legal = () => {
-  const [sideToggle, setSideToggle] = useState(false);
   return (
     <>
-      <Navbar click={() => setSideToggle(true)} />
-      <SideDrawer show={sideToggle} click={() => setSideToggle(false)} />
-      <BackDrop show={sideToggle} click={() => setSideToggle(false)} />
       <div>
         <div className="bg-gray-100 py-20">
           <p className=" text-center text-3xl font-bold">
@@ -44,7 +36,6 @@ const Legal = () => {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

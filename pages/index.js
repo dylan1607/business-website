@@ -12,10 +12,6 @@ import metal from "../statics/metal.svg";
 import material from "../statics/material.svg";
 
 // Import component
-import Navbar from "../components/Navbar";
-import SideDrawer from "../components/SideDrawer";
-import BackDrop from "../components/BackDrop";
-import Footer from "../components/Footer";
 import CardNews from "../components/CardNews";
 import CardFeedback from "../components/CardFeedback";
 import CardBox from "../components/CardBox";
@@ -27,11 +23,9 @@ import { LockClosedIcon } from "@heroicons/react/solid";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 import { fetchQuery } from "../utils/request";
 
 export default function Home({ articles }) {
-  const [sideToggle, setSideToggle] = useState(false);
   return (
     <div>
       <Head>
@@ -40,9 +34,6 @@ export default function Home({ articles }) {
           Manufacturing on Demand | Rapid Prototpying, Custom Parts | TinCNC
         </title>
       </Head>
-      <Navbar click={() => setSideToggle(true)} />
-      <SideDrawer show={sideToggle} click={() => setSideToggle(false)} />
-      <BackDrop show={sideToggle} click={() => setSideToggle(false)} />
 
       {/* <HomeScreen /> */}
 
@@ -202,7 +193,6 @@ export default function Home({ articles }) {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

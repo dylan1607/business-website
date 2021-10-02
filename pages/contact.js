@@ -1,23 +1,15 @@
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import SideDrawer from "../components/SideDrawer";
-import BackDrop from "../components/BackDrop";
 import Link from "next/link";
 import {
   LocationMarkerIcon,
   PhoneIcon,
   MailIcon,
 } from "@heroicons/react/outline";
-import { useState } from "react";
 
 const contact = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [sideToggle, setSideToggle] = useState(false);
+
   return (
     <>
-      <Navbar click={() => setSideToggle(true)} />
-      <SideDrawer show={sideToggle} click={() => setSideToggle(false)} />
-      <BackDrop show={sideToggle} click={() => setSideToggle(false)} />
       <div
         className="flex flex-col p-8 items-center space-y-8 
       overflow-hidden"
@@ -47,7 +39,6 @@ const contact = () => {
           loading="lazy"
         ></iframe>
       </div>
-      <Footer />
     </>
   );
 };

@@ -1,9 +1,5 @@
-import Footer from "../components/Footer";
-import { useState } from "react";
 import Link from "next/link";
-import Navbar from "../components/Navbar";
-import SideDrawer from "../components/SideDrawer";
-import BackDrop from "../components/BackDrop";
+import { useState } from "react";
 
 const Login = () => {
   const [input, setInput] = useState({
@@ -43,13 +39,9 @@ const Login = () => {
       // dispatch(loginUser(val));
     }
   };
-  const [sideToggle, setSideToggle] = useState(false);
 
   return (
     <>
-      <Navbar click={() => setSideToggle(true)} />
-      <SideDrawer show={sideToggle} click={() => setSideToggle(false)} />
-      <BackDrop show={sideToggle} click={() => setSideToggle(false)} />
       <div
         className="flex justify-center items-center py-44 bg-gray-100
     text-black"
@@ -90,7 +82,6 @@ const Login = () => {
           </form>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

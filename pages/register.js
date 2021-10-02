@@ -1,9 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import BackDrop from "../components/BackDrop";
-import SideDrawer from "../components/SideDrawer";
+
 const Register = () => {
   const [input, setInput] = useState({
     first: null,
@@ -18,12 +15,8 @@ const Register = () => {
     setInput({ ...input, [name]: value });
   };
   const onSubmit = () => {};
-  const [sideToggle, setSideToggle] = useState(false);
   return (
     <>
-      <Navbar click={() => setSideToggle(true)} />
-      <SideDrawer show={sideToggle} click={() => setSideToggle(false)} />
-      <BackDrop show={sideToggle} click={() => setSideToggle(false)} />
       <div
         className="flex justify-center items-center py-10 bg-gray-100
     text-black"
@@ -119,7 +112,6 @@ const Register = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };
