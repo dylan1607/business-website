@@ -21,12 +21,11 @@ export default function Article({ article }) {
       <BackDrop show={sideToggle} click={() => setSideToggle(false)} />
 
       {/* Content */}
-      <div className="flex justify-center p-4">
-        <div className="flex flex-col space-y-10 max-w-3xl">
-          <div className="flex flex-col text-center">
-            <h2 className="font-semibold text-2xl break-words">
-              {article.name}
-            </h2>
+      <div className="flex justify-center">
+        <div className="flex flex-col px-4 py-10 max-w-4xl space-y-5">
+          <h2 className="font-semibold text-2xl break-words">{article.name}</h2>
+
+          <div className="">
             <div className="flex justify-between items-center">
               <span className="flex items-center space-x-2">
                 <Image className="text-black" src={logo} alt="" width={25} />
@@ -34,19 +33,20 @@ export default function Article({ article }) {
               </span>
               <p>3 phút đọc</p>
             </div>
+            <Image
+              className="rounded-xl"
+              src={article.header}
+              alt=""
+              width={150}
+              height={100}
+              layout="responsive"
+            />
           </div>
 
-          <Image
-            className="rounded-xl"
-            src={article.header}
-            alt=""
-            width={100}
-            height={50}
-            layout="responsive"
-          />
-
-          <div>{article.content}</div>
-          <div>{article.footer}</div>
+          <div className="flex flex-col space-y-10">
+            <p>{article.content}</p>
+            <p>{article.footer}</p>
+          </div>
         </div>
       </div>
 
