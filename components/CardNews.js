@@ -1,4 +1,6 @@
 import Img from "next/image";
+import landing from "../statics/landing.jpeg";
+
 const CardNews = ({ path, title, author }) => {
   return (
     <div
@@ -8,7 +10,7 @@ const CardNews = ({ path, title, author }) => {
     >
       <Img
         className="rounded-xl"
-        src={path}
+        src={path ? path : landing}
         alt=""
         height={100}
         width={100}

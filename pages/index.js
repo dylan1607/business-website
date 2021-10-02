@@ -9,7 +9,6 @@ import technology from "../statics/technology.svg";
 import industry from "../statics/industry.svg";
 import boxes from "../statics/boxes.svg";
 import metal from "../statics/metal.svg";
-import landing from "../statics/landing.jpeg";
 import material from "../statics/material.svg";
 
 // Import component
@@ -194,7 +193,7 @@ export default function Home({ articles }) {
             {articles.map((item) => (
               <CardNews
                 key={item.id}
-                path={item.header}
+                path={item?.header}
                 title={item.name}
                 author="Admin"
               />
