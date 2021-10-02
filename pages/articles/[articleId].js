@@ -1,3 +1,4 @@
+/* eslint-disable react/no-children-prop */
 // Import Static
 import logo from "../../statics/logo.svg";
 
@@ -11,9 +12,11 @@ import BackDrop from "../../components/BackDrop";
 import { useState } from "react";
 import { fetchQuery } from "../../utils/request";
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
 
 export default function Article({ article }) {
   const [sideToggle, setSideToggle] = useState(false);
+
   return (
     <>
       <Navbar click={() => setSideToggle(true)} />
@@ -44,8 +47,8 @@ export default function Article({ article }) {
           </div>
 
           <div className="flex flex-col space-y-10">
-            <p>{article.content}</p>
-            <p>{article.footer}</p>
+            <ReactMarkdown children={article.content} />
+            <ReactMarkdown children={article.footer} />
           </div>
         </div>
       </div>
