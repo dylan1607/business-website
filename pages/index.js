@@ -28,7 +28,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import axios from "axios";
+import { fetchQuery } from "../utils/request";
 
 export default function Home({ articles }) {
   const [sideToggle, setSideToggle] = useState(false);
@@ -209,8 +209,8 @@ export default function Home({ articles }) {
 
 // Fetch data
 export async function getServerSideProps() {
-  const data = await axios.get("http://quanly.tincnc.vn:1337/articles");
-  const articles = data.data;
+  const res = await fetchQuery("articles");
+  const articles = res.data;
   return {
     props: {
       articles,
