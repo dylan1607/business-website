@@ -1,15 +1,21 @@
 import Img from "next/image";
 import landing from "../statics/landing.jpeg";
 
-const CardNews = ({ path, title, author }) => {
+const CardNews = ({ id, path, title, author }) => {
   return (
     <div
       className="flex flex-col space-y-2 cursor-pointer
       transform transition w-60 h-auto duration-200 hover:scale-105 
-      whitespace-nowrap"
+      whitespace-nowrap relative"
     >
+      <p
+        className="absolute top-2 left-2 z-50 text-white
+      font-bold font-mono"
+      >
+        Article: {id}
+      </p>
       <Img
-        className="rounded-xl"
+        className="rounded-xl "
         src={path ? path : landing}
         alt=""
         height={150}

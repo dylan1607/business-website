@@ -193,6 +193,7 @@ export default function Home({ articles }) {
             {articles.map((item) => (
               <CardNews
                 key={item.id}
+                id={item.id}
                 path={item?.header}
                 title={item.name}
                 author="Admin"
