@@ -6,7 +6,14 @@ const CardNews = ({ path, title, author }) => {
       transform transition w-60 h-auto duration-200 hover:scale-105 
       whitespace-nowrap"
     >
-      <Img className="rounded-xl" src={path} alt="" />
+      <Img
+        className="rounded-xl"
+        src={path}
+        alt=""
+        height={100}
+        width={100}
+        layout="intrinsic"
+      />
       <p className="font-bold truncate">{title}</p>
       <div className="flex justify-between">
         <p>{author}</p>
