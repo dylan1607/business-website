@@ -10,6 +10,7 @@ import industry from "../statics/industry.svg";
 import boxes from "../statics/boxes.svg";
 import metal from "../statics/metal.svg";
 import material from "../statics/material.svg";
+import home from "../statics/home.jpeg";
 
 // Import component
 import CardNews from "../components/CardNews";
@@ -41,9 +42,9 @@ export default function Home({ articles }) {
         {/* Landing section */}
         <div
           style={{
-            backgroundImage: `url("https://images.unsplash.com/photo-1530046614490-89e6f776b83b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80")`,
+            backgroundImage: `url("https://pbs.twimg.com/media/DAmD3kJXcAAlqzl?format=jpg&name=4096x4096")`,
           }}
-          className="bg-cover bg-center text-white"
+          className=" bg-cover bg-fixed bg-left text-black"
         >
           <div className="mx-8 my-40 space-y-8">
             <div className="space-y-4">
@@ -60,7 +61,7 @@ export default function Home({ articles }) {
               <p className="btn btn-info">Nhận báo giá ngay</p>
             </Link>
             <div className="flex items-center space-x-2">
-              <LockClosedIcon width={20} className="text-white" />
+              <LockClosedIcon width={20} className="text-black" />
               <p>Tất cả các nội dung tải lên được giữ an toàn và bảo mật</p>
             </div>
           </div>
