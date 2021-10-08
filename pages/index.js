@@ -81,10 +81,7 @@ export default function Home({ articles }) {
 
         {/* Client */}
         <div className="flex flex-col items-center justify-center p-8">
-          <div
-            className="flex max-w-screen-md items-center justify-between
-        overflow-x-scroll mb-10 scrollbar-hide"
-          >
+          <div className="flex max-w-screen-md mb-5">
             <Image src={fanuc} alt="" />
             <Image src={bosch} alt="" />
             <Image src={makino} alt="" />
@@ -96,17 +93,24 @@ export default function Home({ articles }) {
         </div>
 
         {/* Feedback */}
-        <div className="py-10 space-y-10">
+        <div className="py-5 space-y-10">
           <p className="text-center text-2xl font-semibold px-4">
             Những khách hàng của chúng tôi nói gì
           </p>
-          <div className="flex justify-center space-x-10 px-8">
+          <div className="flex flex-wrap justify-center space-x-10 space-y-5 px-8">
             <CardFeedback
               src={fanuc}
               content="TinCNC luôn đưa đến những gì chúng tôi cần.
               Chúng tôi nhận hàng đúng nơi và đúng thời điểm. 
               Trang web thân thiện với người dùng"
               author="CEO"
+            />
+            <CardFeedback
+              src={bosch}
+              content="TinCNC mang đến sự chuyên nghiệp và dễ dàng. 
+              Họ quan tâm đến việc hoàn thành sản phẩm nên tôi không cần phải tung hứng hay quản lý các nhà cung cấp. 
+              Chúng tôi mua báo giá, và TinCNC sẽ lo phần còn lại "
+              author="Ryan Lambert"
             />
           </div>
         </div>
