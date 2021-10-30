@@ -186,7 +186,7 @@ export default function Home({ articles }) {
             className="flex p-4 space-x-5 justify-between
           overflow-x-scroll scrollbar-hide"
           >
-            {articles.map((item) => (
+            {articles?.map((item) => (
               <CardNews
                 key={item.id}
                 id={item.id}
@@ -203,12 +203,12 @@ export default function Home({ articles }) {
 }
 
 // Fetch data
-export async function getServerSideProps() {
-  const res = await fetchQuery("articles");
-  const articles = res.data;
-  return {
-    props: {
-      articles,
-    },
-  };
-}
+// export async function getServerSideProps() {
+//   const res = await fetchQuery("articles");
+//   const articles = res.data;
+//   return {
+//     props: {
+//       articles,
+//     },
+//   };
+// }
