@@ -10,10 +10,8 @@ import industry from "../statics/industry.svg";
 import boxes from "../statics/boxes.svg";
 import metal from "../statics/metal.svg";
 import material from "../statics/material.svg";
-import home from "../statics/home.jpeg";
 
 // Import component
-import CardNews from "../components/CardNews";
 import CardFeedback from "../components/CardFeedback";
 import CardBox from "../components/CardBox";
 
@@ -24,9 +22,8 @@ import { LockClosedIcon } from "@heroicons/react/solid";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import { fetchQuery } from "../utils/request";
 
-export default function Home({ articles }) {
+export default function Home() {
   return (
     <div>
       <Head>
@@ -186,29 +183,10 @@ export default function Home({ articles }) {
             className="flex p-4 space-x-5 justify-between
           overflow-x-scroll scrollbar-hide"
           >
-            {articles?.map((item) => (
-              <CardNews
-                key={item.id}
-                id={item.id}
-                path={item?.header}
-                title={item.name}
-                author="Admin"
-              />
-            ))}
+
           </div>
         </div>
       </div>
     </div>
   );
 }
-
-// Fetch data
-// export async function getServerSideProps() {
-//   const res = await fetchQuery("articles");
-//   const articles = res.data;
-//   return {
-//     props: {
-//       articles,
-//     },
-//   };
-// }
