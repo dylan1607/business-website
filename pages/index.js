@@ -22,14 +22,9 @@ import { LockClosedIcon } from "@heroicons/react/solid";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-<<<<<<< HEAD
 import { GraphQLClient } from "graphql-request";
 
 export default function Home({ blogPosts }) {
-=======
-
-export default function Home() {
->>>>>>> main
   return (
     <div>
       <Head>
@@ -189,7 +184,6 @@ export default function Home() {
             className="flex p-4 space-x-5 justify-between
           overflow-x-scroll scrollbar-hide"
           >
-<<<<<<< HEAD
             {blogPosts?.map((item) => (
               <CardNews
                 key={item.id}
@@ -199,27 +193,12 @@ export default function Home() {
                 author="Admin"
               />
             ))}
-=======
-
->>>>>>> main
           </div>
         </div>
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
-
-// Fetch data
-// export async function getServerSideProps() {
-//   const res = await fetchQuery("articles");
-//   const articles = res.data;
-//   return {
-//     props: {
-//       articles,
-//     },
-//   };
-// }
 
 export async function getStaticProps() {
   const graphcms = new GraphQLClient(
@@ -246,5 +225,3 @@ export async function getStaticProps() {
     },
   };
 }
-=======
->>>>>>> main
