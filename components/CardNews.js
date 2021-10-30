@@ -5,7 +5,6 @@ import Link from "next/link";
 const CardNews = ({ id, path, title, author }) => {
   return (
     <Link key={id} href={`/articles/${id}`} passHref>
-      {/* <Link key={id} href={`/articles`}> */}
       <div
         className="flex flex-col space-y-2 cursor-pointer
       transform transition w-60 h-auto duration-200 hover:scale-105 
