@@ -12,6 +12,7 @@ import metal from "../statics/metal.svg";
 import material from "../statics/material.svg";
 
 // Import component
+import CardNews from "../components/CardNews";
 import CardFeedback from "../components/CardFeedback";
 import CardBox from "../components/CardBox";
 
@@ -199,6 +200,17 @@ export default function Home({ blogPosts }) {
     </div>
   );
 }
+
+// Fetch data
+// export async function getServerSideProps() {
+//   const res = await fetchQuery("articles");
+//   const articles = res.data;
+//   return {
+//     props: {
+//       articles,
+//     },
+//   };
+// }
 
 export async function getStaticProps() {
   const graphcms = new GraphQLClient(
