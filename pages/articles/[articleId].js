@@ -40,8 +40,7 @@ export default function Article({ blogPost }) {
           </div>
 
           <div className="flex flex-col space-y-10">
-            <ReactMarkdown children={blogPost?.content} />
-            <ReactMarkdown children={blogPost?.footer} />
+            <ReactMarkdown>{blogPost?.content}</ReactMarkdown>
           </div>
         </div>
       </div>
@@ -52,13 +51,16 @@ export default function Article({ blogPost }) {
 export async function getStaticProps({ params }) {
   const { blogPost } = await graphcms.request(
     `
-      blogPosts(where: {id: "ckv86x0pcfp5r0b3600rmp41i"}) {
+    query ProductPageQuery($id: ID!) {
+      blogPost(where: { id: $id }) {
+        title
+        content
         coverImage {
-          id
           url
         }
       }
-      `,
+    }
+  `,
     {
       id: params.articleId,
     }
