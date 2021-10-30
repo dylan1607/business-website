@@ -10,10 +10,8 @@ import industry from "../statics/industry.svg";
 import boxes from "../statics/boxes.svg";
 import metal from "../statics/metal.svg";
 import material from "../statics/material.svg";
-import home from "../statics/home.jpeg";
 
 // Import component
-import CardNews from "../components/CardNews";
 import CardFeedback from "../components/CardFeedback";
 import CardBox from "../components/CardBox";
 
@@ -24,9 +22,14 @@ import { LockClosedIcon } from "@heroicons/react/solid";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+<<<<<<< HEAD
 import { GraphQLClient } from "graphql-request";
 
 export default function Home({ blogPosts }) {
+=======
+
+export default function Home() {
+>>>>>>> main
   return (
     <div>
       <Head>
@@ -186,6 +189,7 @@ export default function Home({ blogPosts }) {
             className="flex p-4 space-x-5 justify-between
           overflow-x-scroll scrollbar-hide"
           >
+<<<<<<< HEAD
             {blogPosts?.map((item) => (
               <CardNews
                 key={item.id}
@@ -195,12 +199,16 @@ export default function Home({ blogPosts }) {
                 author="Admin"
               />
             ))}
+=======
+
+>>>>>>> main
           </div>
         </div>
       </div>
     </div>
   );
 }
+<<<<<<< HEAD
 
 // Fetch data
 // export async function getServerSideProps() {
@@ -238,3 +246,5 @@ export async function getStaticProps() {
     },
   };
 }
+=======
+>>>>>>> main
