@@ -33,7 +33,7 @@ const contact = () => {
           </li>
         </ul>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15675.12300557843!2d106.76925233310695!3d10.828083676582963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317526fdf4aad5e7%3A0xd237aa9b5b2eca8e!2sVinahometech%20Nh%C3%A0%20Th%C3%B4ng%20Minh!5e0!3m2!1svi!2s!4v1631172826719!5m2!1svi!2s"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.780680954031!2d106.77581305074148!3d10.828089061160096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527f6faa8a563%3A0x16fba23db378baaa!2sTinCNC!5e0!3m2!1svi!2s!4v1636099556479!5m2!1svi!2s"
           height={300}
           allowFullScreen=""
           loading="lazy"

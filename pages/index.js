@@ -187,8 +187,8 @@ export default function Home({ blogPosts }) {
           >
             {blogPosts?.map((item) => (
               <CardNews
-                key={item.id}
-                id={item.id}
+                key={item?.id}
+                router={item?.slug}
                 path={item?.coverImage?.url}
                 title={item.title}
                 author="Admin"
@@ -222,6 +222,7 @@ export async function getStaticProps() {
       { 
         blogPosts {
           id
+          slug
           title
           content
           coverImage {

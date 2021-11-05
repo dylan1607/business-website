@@ -51,8 +51,8 @@ export default function Article({ blogPost }) {
 export async function getStaticProps({ params }) {
   const { blogPost } = await graphcms.request(
     `
-    query ProductPageQuery($id: ID!) {
-      blogPost(where: { id: $id }) {
+    query ProductPageQuery($slug: String!) {
+      blogPost(where: { slug: $slug }) {
         title
         content
         coverImage {
@@ -62,7 +62,7 @@ export async function getStaticProps({ params }) {
     }
   `,
     {
-      id: params.articleId,
+      slug: params.articleId,
     }
   );
   return {
@@ -79,12 +79,13 @@ export async function getStaticPaths() {
   { 
     blogPosts {
       id
+      slug
     }
   }
   `);
   // Get path every re-render base on blogPosts
   const paths = blogPosts.map((item) => ({
-    params: { articleId: item.id },
+    params: { articleId: item.slug },
   }));
 
   return {
