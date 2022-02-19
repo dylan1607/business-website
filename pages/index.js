@@ -25,7 +25,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { GraphQLClient } from 'graphql-request';
 
-export default function Home({ blogPosts }) {
+export default function Home({ blogPosts, others }) {
+  // console.log(others);
   return (
     <div>
       <Head>
@@ -37,15 +38,17 @@ export default function Home({ blogPosts }) {
 
       {/* <HomeScreen /> */}
 
-      <div className='flex flex-col overflow-hidden'>
+      <div className='flex flex-col overflow-hidden text-black'>
         {/* Landing section */}
         <div
           style={{
-            backgroundImage: `url("https://pbs.twimg.com/media/DAmD3kJXcAAlqzl?format=jpg&name=4096x4096")`,
+            backgroundImage: `url(${
+              others[0]?.asset ? others[0]?.asset.url : others[0]?.content
+            })`,
           }}
-          className=' bg-cover bg-fixed bg-left text-black'
+          className=' bg-cover bg-left text-white'
         >
-          <div className='mx-8 my-40 space-y-8'>
+          <div className='my-28 space-y-8 px-10'>
             <div className='space-y-4'>
               <h2 className='flex flex-col font-medium text-5xl'>
                 Sản Xuất Theo
@@ -60,7 +63,7 @@ export default function Home({ blogPosts }) {
               <p className='btn btn-info'>Nhận báo giá ngay</p>
             </Link>
             <div className='flex items-center space-x-2'>
-              <LockClosedIcon width={20} className='text-black' />
+              <LockClosedIcon width={20} />
               <p>Tất cả các nội dung tải lên được giữ an toàn và bảo mật</p>
             </div>
           </div>
@@ -223,7 +226,7 @@ export async function getStaticProps() {
     'https://api-ap-northeast-1.graphcms.com/v2/ckucyn6v66g7m01yz259g4qm9/master'
   );
 
-  const { blogPosts } = await graphcms.request(
+  const { blogPosts, others } = await graphcms.request(
     `
       { 
         blogPosts {
@@ -235,12 +238,20 @@ export async function getStaticProps() {
             url
           }
         }
+        others (where: {slug:"banner-home"}){
+          title
+          content
+          asset {
+            url
+          }
+        }
       }
     `
   );
   return {
     props: {
       blogPosts,
+      others,
     },
   };
 }
